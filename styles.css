@@ -9,6 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #001a4b;
     color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling on small screens */
 }
 
 /* Header */
@@ -22,18 +23,19 @@ header {
 
 header .logo h1 {
     color: #fff300;
+    font-size: 1.5rem; /* Reduce logo size for mobile */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Add flex wrap for responsiveness */
+    flex-wrap: wrap;
+    justify-content: center; /* Center navigation on mobile */
 }
 
 nav ul li {
-    display: inline;
-    margin-left: 20px;
+    margin-left: 0;
 }
 
 nav ul li a {
@@ -41,6 +43,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
+    font-size: 14px; /* Smaller text size for mobile */
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
@@ -53,14 +56,14 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 10px; /* Reduce padding for mobile */
     background-color: #153266;
 }
 
 .hero .game-title img {
     width: 100%;
-    max-width: 500px;
-    margin-top: 50px;
+    max-width: 300px; /* Ensure smaller image on mobile */
+    margin-top: 20px;
 }
 
 .play-button {
@@ -69,10 +72,10 @@ nav ul li a:hover {
 
 .play-button .btn-play {
     background-color: #fff300;
-    padding: 10px 30px;
+    padding: 10px 20px;
     color: #001a4b;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 18px; /* Adjust button size for mobile */
     font-weight: bold;
 }
 
@@ -85,130 +88,132 @@ nav ul li a:hover {
 .characters {
     background-color: #0066cc;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 10px; /* Reduce padding for mobile */
 }
 
 .characters h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem;
 }
 
 .character-grid {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
+}
+
+.character-grid img {
+    width: 80%; /* Adjust image width for mobile */
+    max-width: 200px; /* Smaller character images on mobile */
 }
 
 /* Footer */
 footer {
     background-color: #ffe600;
-    padding: 15px 50px;
+    padding: 10px 20px; /* Reduce padding for mobile */
     color: #000000;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    text-align: center; /* Ensure footer content is centered */
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap; /* Ensure footer is responsive */
+    flex-direction: column;
+    text-align: center;
 }
 
 .footer-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #000;
+    font-size: 12px; /* Smaller text in the footer */
 }
 
 .social-icons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap; /* Add wrapping for smaller screens */
+    gap: 10px;
 }
 
 .social-icons a img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
+/* Responsive Media Queries */
+
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
     header {
         flex-direction: column;
+        align-items: center;
         padding: 10px 20px;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 15px;
-        font-size: 18px;
+        gap: 10px;
     }
 
     .hero .game-title img {
-        width: 80%;
-        max-width: 400px;
+        max-width: 250px;
     }
 
     .play-button .btn-play {
-        font-size: 20px;
+        font-size: 16px;
         padding: 8px 20px;
     }
-}
 
-@media (max-width: 768px) {
-    nav ul {
-        gap: 10px;
-        font-size: 16px;
-    }
-
-    .hero .game-title img {
-        width: 250px;
-    }
-
-    .play-button .btn-play {
-        font-size: 18px;
-        padding: 7px 18px;
-    }
-
-    .characters h2 {
-        font-size: 1.8rem;
+    .characters {
+        padding: 20px 0;
     }
 
     .character-grid {
-        gap: 20px;
+        flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    .character-card {
+        width: 150px;
+    }
+
+    footer {
+        padding: 15px;
     }
 
     .footer-container {
         flex-direction: column;
-        text-align: center;
+    }
+
+    .social-icons {
+        gap: 10px;
     }
 }
 
+/* Mobile (up to 480px) */
 @media (max-width: 480px) {
     header {
+        flex-direction: column;
+        align-items: center;
         padding: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 1.2rem; /* Reduce logo size for smaller screens */
     }
 
     nav ul {
         flex-direction: column;
+        gap: 5px;
         font-size: 14px;
     }
 
+    .hero {
+        padding: 10px 5px;
+    }
+
     .hero .game-title img {
-        width: 180px;
+        width: 180px; /* Further reduce image size for small screens */
     }
 
     .play-button .btn-play {
         font-size: 16px;
-        padding: 6px 15px;
+        padding: 7px 15px;
     }
 
     .characters h2 {
@@ -220,16 +225,16 @@ footer {
         gap: 10px;
     }
 
+    .character-card {
+        width: 150px;
+    }
+
     footer {
         padding: 10px;
     }
 
-    .footer-text {
-        margin-bottom: 10px;
-    }
-
     .social-icons img {
-        width: 25px;
+        width: 20px; /* Reduce size of social icons on mobile */
     }
 }
 
