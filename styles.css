@@ -62,8 +62,8 @@ nav ul li a:hover {
 
 .hero .game-title img {
     width: 100%;
-    max-width: 300px; /* Ensure smaller image on mobile */
-    margin-top: 20px;
+    max-width: 500px; /* Ensure smaller image on mobile */
+    margin-top: 120px;
 }
 
 .play-button {
@@ -97,16 +97,17 @@ nav ul li a:hover {
 
 .character-grid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between; /* Menyebarkan gambar secara merata */
+    gap: 20px; /* Memberikan jarak antar elemen */
     padding: 20px;
 }
 
 .character-grid img {
-    width: 80%; /* Adjust image width for mobile */
-    max-width: 200px; /* Smaller character images on mobile */
+    max-width: 400px; /* Mengatur lebar maksimal gambar */
+    height: auto;
 }
+
 
 /* Footer */
 footer {
@@ -186,6 +187,12 @@ footer {
 }
 
 /* Mobile (up to 480px) */
+@media only screen and (max-width: 768px) {
+    nav {
+      display: none;
+    }
+  }
+  
 @media (max-width: 480px) {
     header {
         flex-direction: column;
