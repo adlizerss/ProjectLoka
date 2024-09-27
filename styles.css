@@ -699,8 +699,8 @@ h2 {
     display: none;
   }
   
-  /* Menu toggle (hamburger) for mobile */
-  .menu-toggle {
+  /* Menu toggle (hamburger) styling for mobile */
+.menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -713,22 +713,29 @@ h2 {
     margin: 4px;
   }
   
-  /* Media query for mobile devices */
+  /* Hides the navigation links on mobile by default */
+  .nav-links {
+    display: none;
+  }
+  
+  /* Media query to handle mobile responsiveness */
   @media screen and (max-width: 768px) {
     .menu-toggle {
-      display: flex;
+      display: flex; /* Shows the hamburger menu on mobile */
     }
-    
+  
+    /* Hides the navigation links until activated */
     .nav-links {
       display: none;
       position: absolute;
       top: 60px;
       right: 0;
-      background-color: #ff0000;
+      background-color: #ff0000; /* Same as the header background */
       width: 100%;
       text-align: center;
     }
   
+    /* Mobile-friendly vertical menu layout */
     .nav-links ul {
       flex-direction: column;
     }
@@ -736,9 +743,12 @@ h2 {
     .nav-links ul li {
       margin: 10px 0;
     }
-    
+  
+    /* When the hamburger is clicked, show the menu */
     .nav-links.active {
       display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
