@@ -704,6 +704,9 @@ h2 {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: absolute; /* To allow positioning in the top-right corner */
+    right: 20px; /* Adjust the distance from the right edge */
+    top: 20px;  /* Adjust the distance from the top edge */
   }
   
   .menu-toggle .bar {
