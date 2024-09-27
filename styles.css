@@ -104,9 +104,7 @@ nav ul li a:hover {
 }
 
 .character-grid img {
-    max-width: 100%;
-    height: auto;
-    max-width: 100px; /* Mengatur lebar maksimal gambar */
+    max-width: 400px; /* Mengatur lebar maksimal gambar */
     height: auto;
 }
 
@@ -505,9 +503,15 @@ h1::after {
 }
 
 .character-grid img {
+    max-width: 100%;
     cursor: pointer;
     width: 400px; /* Atur ukuran gambar sesuai kebutuhan */
     transition: transform 0.3s ease; /* Animasi transisi */
+}
+.character-dhani {
+    max-width: 100%;
+    display: flex;
+    height: auto;
 }
 
 .character-grid img:hover {
