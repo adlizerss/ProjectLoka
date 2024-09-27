@@ -22,6 +22,12 @@ header {
     margin-bottom: auto;
 }
 
+.logo {
+    margin-right: 20px;
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+}
+
 header .logo h1 {
     color: #fff300;
     font-size: 1.5rem; /* Reduce logo size for mobile */
