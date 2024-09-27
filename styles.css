@@ -104,6 +104,8 @@ nav ul li a:hover {
 }
 
 .character-grid img {
+    max-width: 100%;
+    height: auto;
     max-width: 400px; /* Mengatur lebar maksimal gambar */
     height: auto;
 }
