@@ -76,6 +76,8 @@ nav ul li a:hover {
 
 .play-button {
     margin-top: 20px;
+    display: block;
+    margin: 20px auto; /* Ini untuk memusatkan tombol secara horizontal */
 }
 
 .play-button .btn-play {
