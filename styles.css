@@ -454,26 +454,29 @@ h1::after {
 /* Character Section */
 .character-section-dhani {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: left;
     background-color: #153266;
-    padding: 0px 150px; /* Adjusted for fixed navbar */
+    text-align: left;
+    padding: 20px 150px; /* Adjusted for fixed navbar */
 }
 
 .character-section-soni {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: left;
     background-color: #153266;
-    padding: 0px 150px; /* Adjusted for fixed navbar */
+    text-align: left;
+    padding: 20px 150px; /* Adjusted for fixed navbar */
 }
 
 .character-section-silva {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: left;
     background-color: #153266;
-    padding: 0px 150px; /* Adjusted for fixed navbar */
+    text-align: left;
+    padding: 20px 150px; /* Adjusted for fixed navbar */
 }
 
 .character-info {
@@ -482,13 +485,12 @@ h1::after {
 }
 
 .character-info h1 {
-    font-size: 72px;
-    font-weight: 800;
+    font-size: 3rem
 }
 
 .character-info p {
-    font-size: 22px;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 .character-image {
@@ -842,3 +844,59 @@ header {
       align-items: center;
     }
   }
+
+  /* Untuk perangkat mobile dengan lebar hingga 768px */
+@media (max-width: 768px) {
+    /* Pastikan konten header lebih responsif */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .character-section-dhani {
+        flex-direction: column; /* Ubah arah flex menjadi kolom untuk mobile */
+        align-items: center;
+        padding: 10px 20px;
+        text-align: center; /* Sejajarkan teks dan gambar di tengah */
+    }
+
+    .character-section-soni {
+        flex-direction: column; /* Ubah arah flex menjadi kolom untuk mobile */
+        align-items: center;
+        padding: 10px 20px;
+        text-align: center; /* Sejajarkan teks dan gambar di tengah */
+    }
+
+    .character-section-silva {
+        flex-direction: column; /* Ubah arah flex menjadi kolom untuk mobile */
+        align-items: center;
+        padding: 10px 20px;
+        text-align: center; /* Sejajarkan teks dan gambar di tengah */
+    }
+
+    .character-info {
+        margin-bottom: 20px; /* Beri jarak antara teks dan gambar */
+        text-align: center;
+    }
+
+    .character-image img {
+        width: 100%;
+        max-width: 300px; /* Atur ukuran gambar sesuai dengan ukuran layar */
+        height: auto;
+    }
+
+    .hero .game-title img {
+        max-width: 250px; /* Pastikan gambar lebih kecil di layar mobile */
+    }
+
+    .play-button .btn-play {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .character-grid {
+        flex-direction: column;
+        gap: 10px; /* Tambahkan jarak antar elemen */
+    }
+}
