@@ -456,9 +456,11 @@ h1::after {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start; /* Atur teks lebih ke atas */
     background-color: #153266;
     text-align: left;
     padding: 20px 150px; /* Adjusted for fixed navbar */
+    position: relative;
 }
 
 .character-section-soni {
@@ -482,15 +484,19 @@ h1::after {
 .character-info {
     flex: 1;
     padding-right: 20px;
+    padding-top: 0px;
+    margin-top: 250px;
 }
 
 .character-info h1 {
-    font-size: 3rem
+    font-size: 3rem;
+    margin-bottom: 60px;
 }
 
 .character-info p {
     font-size: 1.2rem;
     line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .character-image {
