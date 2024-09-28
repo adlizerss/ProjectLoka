@@ -25,7 +25,7 @@ header {
 .logo {
     margin-left: 0px;
     margin-top: 20px;
-    width: 50px; /* Adjust the width as needed */
+    width: 400px; /* Adjust the width as needed */
     height: auto;
 }
 
@@ -66,6 +66,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 20px 10px; /* Reduce padding for mobile */
     background-color: #153266;
+    margin-bottom: 50px;
 }
 
 .hero .game-title img {
@@ -842,4 +843,3 @@ header {
       align-items: center;
     }
   }
-  
