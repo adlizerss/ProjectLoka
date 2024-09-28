@@ -70,7 +70,7 @@ nav ul li a:hover {
 
 .hero .game-title img {
     width: 100%;
-    max-width: 800px; /* Ensure smaller image on mobile */
+    max-width: 700px; /* Ensure smaller image on mobile */
     margin-top: 100px;
 }
 
@@ -90,6 +90,10 @@ nav ul li a:hover {
 .play-button .btn-play:hover {
     background-color: #ff2d2d;
     color: white;
+}
+
+.play-button-wrapper {
+    margin-bottom: 50px; /* Atur nilai ini untuk menambah/mengurangi jarak */
 }
 
 /* Characters Section */
@@ -228,7 +232,7 @@ footer {
 
     .play-button .btn-play {
         font-size: 16px;
-        padding: 20px 15px;
+        padding: 20px 50px;
     }
 
     .characters h2 {
