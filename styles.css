@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #001a4b;
+    background-color: #153266;
     color: white;
     overflow-x: hidden; /* Prevent horizontal scrolling on small screens */
 }
@@ -17,7 +17,7 @@ header {
     background-color: #ff2d2d;
     display: flex;
     justify-content: space-between;
-    padding: 50px 50px;
+    padding: 50px 10px;
     align-items: center;
     margin-bottom: auto;
 }
@@ -25,7 +25,7 @@ header {
 .logo {
     margin-left: 0px;
     margin-top: 20px;
-    width: 400px; /* Adjust the width as needed */
+    width: 350px; /* Adjust the width as needed */
     height: auto;
 }
 
@@ -64,9 +64,8 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 20px 10px; /* Reduce padding for mobile */
+    padding: 80px 50px; /* Reduce padding for mobile */
     background-color: #153266;
-    margin-bottom: 50px;
 }
 
 .hero .game-title img {
@@ -82,7 +81,7 @@ nav ul li a:hover {
 .play-button .btn-play {
     background-color: #fff300;
     padding: 10px 20px;
-    color: #001a4b;
+    color: #153266;
     text-decoration: none;
     font-size: 18px; /* Adjust button size for mobile */
     font-weight: bold;
