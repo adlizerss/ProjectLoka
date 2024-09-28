@@ -70,8 +70,8 @@ nav ul li a:hover {
 
 .hero .game-title img {
     width: 100%;
-    max-width: 500px; /* Ensure smaller image on mobile */
-    margin-top: 120px;
+    max-width: 800px; /* Ensure smaller image on mobile */
+    margin-top: 100px;
 }
 
 .play-button {
@@ -223,12 +223,12 @@ footer {
     }
 
     .hero .game-title img {
-        width: 180px; /* Further reduce image size for small screens */
+        width: 350px; /* Further reduce image size for small screens */
     }
 
     .play-button .btn-play {
         font-size: 16px;
-        padding: 7px 15px;
+        padding: 20px 15px;
     }
 
     .characters h2 {
@@ -896,7 +896,7 @@ header {
     }
 
     .hero .game-title img {
-        max-width: 250px; /* Pastikan gambar lebih kecil di layar mobile */
+        max-width: 350px; /* Pastikan gambar lebih kecil di layar mobile */
     }
 
     .play-button .btn-play {
