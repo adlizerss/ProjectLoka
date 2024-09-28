@@ -866,9 +866,22 @@ header {
     }
 
     .character-info {
-        margin-bottom: 10px; /* Beri jarak antara teks dan gambar */
-        margin-top: 0px;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Menyelaraskan vertikal */
+        align-items: center; /* Menyelaraskan horizontal */
+        text-align: center; /* Menyelaraskan teks di tengah */
+        height: 100vh; /* Pastikan kontainer mengambil seluruh tinggi viewport */
+        padding: 0 20px; /* Berikan padding agar tidak terlalu mepet dengan tepi */
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    .character-info p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        max-width: 600px; /* Batasi lebar teks untuk keterbacaan lebih baik */
     }
 
     .character-image img {
