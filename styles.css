@@ -154,7 +154,6 @@ footer .social-icons a {
 footer .social-icons img {
     width: 100%;
     height: 100%;
-    padding: -30px;
     vertical-align: middle; /* Ensures icon images are vertically aligned */
 }
 
@@ -260,10 +259,6 @@ footer .social-icons img {
 
     footer {
         padding: 10px;
-    }
-
-    .social-icons img {
-        width: 20px; /* Reduce size of social icons on mobile */
     }
 }
 
@@ -897,7 +892,6 @@ header {
     }
 
     footer {
-        padding: 10px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
