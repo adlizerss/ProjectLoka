@@ -909,3 +909,19 @@ header {
         gap: 10px; /* Tambahkan jarak antar elemen */
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#dhani {
+    scroll-margin-top: 310px; /* Adjust the margin to fit your needs */
+}
+
+#soni {
+    scroll-margin-top: 250px; /* Adjust the margin to fit your needs */
+}
+
+#silva {
+    scroll-margin-top: 300px; /* Adjust the margin to fit your needs */
+}
