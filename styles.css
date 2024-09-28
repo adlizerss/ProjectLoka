@@ -413,7 +413,7 @@ h1::after {
 
 /* Section with image */
 .image-section {
-    background-color: #33a2ff;
+    background-color: #0066cc;
     padding: 50px 0;
     text-align: center;
 }
@@ -460,7 +460,6 @@ h1::after {
     background-color: #153266;
     text-align: left;
     padding: 20px 150px; /* Adjusted for fixed navbar */
-    position: relative;
 }
 
 .character-section-soni {
@@ -486,6 +485,7 @@ h1::after {
     padding-right: 20px;
     padding-top: 0px;
     margin-top: 250px;
+    background-color: #153266;
 }
 
 .character-info h1 {
@@ -503,6 +503,7 @@ h1::after {
     flex: 1;
     display: flex;
     justify-content: center;
+    background-color: #153266;
 }
 
 .character-image img {
@@ -863,26 +864,28 @@ header {
     .character-section-dhani {
         flex-direction: column; /* Ubah arah flex menjadi kolom untuk mobile */
         align-items: center;
-        padding: 10px 20px;
+        padding: 70px 20px;
         text-align: center; /* Sejajarkan teks dan gambar di tengah */
+        overflow: hidden; /* Mencegah margin collapse */
     }
 
     .character-section-soni {
         flex-direction: column; /* Ubah arah flex menjadi kolom untuk mobile */
         align-items: center;
-        padding: 10px 20px;
+        padding: 70px 20px;
         text-align: center; /* Sejajarkan teks dan gambar di tengah */
     }
 
     .character-section-silva {
         flex-direction: column; /* Ubah arah flex menjadi kolom untuk mobile */
         align-items: center;
-        padding: 10px 20px;
+        padding: 70px 20px;
         text-align: center; /* Sejajarkan teks dan gambar di tengah */
     }
 
     .character-info {
-        margin-bottom: 20px; /* Beri jarak antara teks dan gambar */
+        margin-bottom: 10px; /* Beri jarak antara teks dan gambar */
+        margin-top: 0px;
         text-align: center;
     }
 
