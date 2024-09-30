@@ -20,6 +20,7 @@ header {
     padding: 50px 10px;
     align-items: center;
     margin-bottom: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adding shadow */
 }
 
 .logo {
@@ -62,10 +63,34 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Agar video di belakang konten */
+}
+
+#background-video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
 .hero {
     text-align: center;
     padding: 80px 50px; /* Reduce padding for mobile */
-    background-color: #153266;
+    background-color: #15316600;
 }
 
 .hero .game-title img {
@@ -74,24 +99,22 @@ nav ul li a:hover {
     margin-top: 100px;
 }
 
-.play-button {
-    margin-top: 20px;
-    display: block;
-    margin: 50px auto; /* Ini untuk memusatkan tombol secara horizontal */
-}
-
 .play-button .btn-play {
-    background-color: #fff300;
-    padding: 10px 20px;
-    color: #153266;
+    background-color: #fff300; /* Button background color */
+    padding: 15px 30px; /* Padding for the button */
+    color: #153266; /* Text color */
     text-decoration: none;
-    font-size: 18px; /* Adjust button size for mobile */
-    font-weight: bold;
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border: 3px solid black; /* Black border */
+    box-shadow: 0 4px 0 black; /* Precise shadow to enhance the button's border */
+    transition: all 0.3s ease; /* Smooth transition on hover */
 }
 
 .play-button .btn-play:hover {
-    background-color: #ff2d2d;
-    color: white;
+    background-color: #ff2d2d; /* Background color on hover */
+    color: white; /* Text color on hover */
+    box-shadow: 0 6px 0 black; /* Adjust shadow to give a "pressed" effect on hover */
 }
 
 .play-button-wrapper {
