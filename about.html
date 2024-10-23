@@ -44,10 +44,32 @@
         <p>Merupakan game edukasi yang bertujuan untuk mengenalkan materi unsur-unsur seni rupa dengan cara yang menyenangkan lewat bermain game bergenre petualangan. Game ini memiliki gaya 2d Platformer yang dimana kita dapat mengendalikan karakter yang ada untuk dapat berpetualang sesuai dengan intruksi yang ada.</p>
     </section>
 
+    <!-- Empty Section for Spacing -->
+    <section class="spacer"></section>
+
     <!-- Section with Image -->
-    <section class="image-section">
-        <img src="images/cm.png" alt="Loka Character Image">
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/gallery1.png" alt="Loka Image 1" onclick="openFullscreen(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery2.png" alt="Loka Image 2" onclick="openFullscreen(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery3.png" alt="Loka Image 3" onclick="openFullscreen(this)">
+            </div>
+        </div>
     </section>
+
+    <!-- Empty Section for Spacing -->
+    <section class="spacer"></section>
+
+    <!-- Modal for Fullscreen Image -->
+<div id="fullscreenModal" class="modal">
+    <span class="close" onclick="closeFullscreen()">&times;</span>
+    <img class="modal-content" id="fullscreenImg">
+</div>
     </main>
 
     <footer>
@@ -70,6 +92,33 @@
           navLinks.classList.toggle('active');
         });
       </script>
+
+<script>
+    // Fungsi untuk membuka gambar dalam mode fullscreen
+    function openFullscreen(img) {
+        var modal = document.getElementById('fullscreenModal');
+        var fullscreenImg = document.getElementById('fullscreenImg');
+        modal.style.display = "block";
+        fullscreenImg.src = img.src;
+        fullscreenImg.style.width = "auto";
+        fullscreenImg.style.height = "auto";
+    }
+
+    // Fungsi untuk menutup modal fullscreen
+    function closeFullscreen() {
+        var modal = document.getElementById('fullscreenModal');
+        modal.style.display = "none";
+    }
+
+    // Menutup modal ketika mengklik di luar gambar
+    window.onclick = function(event) {
+        var modal = document.getElementById('fullscreenModal');
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
 
     
 </body>

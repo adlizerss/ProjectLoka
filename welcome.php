@@ -1,3 +1,16 @@
+<?php
+session_start(); // Memulai sesi
+
+// Cek apakah pengguna sudah login
+if (!isset($_SESSION['username'])) {
+    header("Location: login.html"); // Redirect ke halaman login jika belum login
+    exit;
+}
+
+// Ambil username dari sesi
+$username = $_SESSION['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,39 +32,42 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="character.html">Character</a></li>
-                <li><a href="login.html" class="active">Account</a></li>
+                <li><a href="login.html">Account</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="character.html">Character</a></li>
+              <li><a href="login.html">Account</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Sign Up Section -->
-    <div class="register-container">
-        <div class="signup-box">
-            <h2>Sign Up</h2>
-            <form action="register.php" method="POST">
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="input-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-                </div>
-                <div class="btn-container">
-                    <button type="submit" class="signup-btn">Sign Up</button>
-                </div>
-            </form>
-        </div>
+    <section class="spacer"></section>
+        <!-- Main Content -->
+    
+    <div class="main-content">
+        <h1>Welcome, <?php echo htmlspecialchars($username); ?>!</h1>
     </div>
+
+    <section class="hero">
+        <div class="play-button">
+            <a href="https://adlizerss.itch.io/demo-loka-the-elemental-of-arts" class="btn-play">PLAY NOW</a>
+        </div>
+    </section>
+
+    <!-- Section with Image -->
+    <section class="image-section">
+        <img src="images/cm.png" alt="Loka Character Image">
+    </section>
     </main>
 
     <footer>
