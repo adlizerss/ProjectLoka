@@ -1,0 +1,91 @@
+/* Menggunakan font Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffcc00, #ff2d2d, #153266);
+    background-size: 400% 400%;
+    animation: gradient-bg 10s ease infinite;
+}
+
+/* Animasi Background */
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Admin Login Box */
+.admin-login-box {
+    background-color: #2381fe; /* Warna biru untuk box utama */
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Judul Halaman */
+.admin-login-box h2 {
+    color: #ffffff; /* Warna teks utama */
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Admin Input Group */
+.admin-input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Label */
+.admin-input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Input Fields */
+.admin-input-group input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: #ffffff; /* Warna putih untuk input field */
+    color: #153266; /* Warna teks input */
+    font-size: 16px;
+}
+
+/* Tombol Login */
+.admin-login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #ffcc00; /* Warna tombol */
+    border: none;
+    border-radius: 8px;
+    color: #153266; /* Warna teks pada tombol */
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.admin-login-btn:hover {
+    background-color: #e6b800; /* Warna tombol saat hover */
+}

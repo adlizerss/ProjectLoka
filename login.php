@@ -39,3 +39,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $conn->close(); // Tutup koneksi ke database
 }
+
+$username = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    // Proses login selanjutnya...
+}
+?>
+
+<form action="login.php" method="POST">
+    <div class="admin-input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" placeholder="Enter your username">
+    </div>
+    <div class="admin-input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+    </div>
+    <button type="submit" class="admin-login-btn">Sign In</button>
+</form>

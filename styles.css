@@ -1086,3 +1086,18 @@ html {
     text-decoration: none;
     cursor: pointer;
 }
+
+.back-btn {
+    background-color: transparent; /* Jika ingin tanpa background */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: white;
+    color: black; /* Warna teks saat hover menjadi hitam */
+}
